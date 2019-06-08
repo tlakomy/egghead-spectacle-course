@@ -39,11 +39,8 @@ export default class Presentation extends React.Component {
         return (
             <Deck
                 theme={theme}
-                autoplay={true}
-                autoplayDuration={1000}
-                autoplayLoop={false}
-                showFullscreenControl={false}
-                progress="bar"
+                transition={['slide']}
+                transitionDuration={1000}
             >
                 <Slide>
                     <Heading>Learn spectacle</Heading>
@@ -122,6 +119,13 @@ export default class Presentation extends React.Component {
                             </Fit>
                         </Fill>
                     </Layout>
+                </Slide>
+
+                <Slide transition={['zoom', 'spin', 'fade', 'slide']}>
+                    <Heading textColor="heading" size={5}>
+                        Provide a transition for the whole deck or a single
+                        slide with transition prop
+                    </Heading>
                 </Slide>
             </Deck>
         );
