@@ -1,6 +1,15 @@
 import React from 'react';
 import styled from 'react-emotion';
-import { Deck, Slide, Image, Heading, Text } from 'spectacle';
+import {
+    Deck,
+    Slide,
+    Image,
+    Heading,
+    Text,
+    Layout,
+    Fill,
+    Fit
+} from 'spectacle';
 
 import createTheme from 'spectacle/lib/themes/default';
 
@@ -87,6 +96,25 @@ export default class Presentation extends React.Component {
                     </Heading>
                     <Image src={images.spectacle} height="200px" />
                     <Image src={images.egghead} height="200px" />
+                </Slide>
+
+                <Slide>
+                    <Heading textColor="heading" caps fit>
+                        {`Use <Layout /> and <Fill /> tags for flexible layouts`}
+                    </Heading>
+                    <Layout>
+                        <Fill>
+                            <CustomText bgColor="white">Check out</CustomText>
+                            <CustomText bgColor="white">those</CustomText>
+                            <CustomText bgColor="white">images:</CustomText>
+                        </Fill>
+                        <Fill>
+                            <Image src={images.spectacle} padding={10} />
+                        </Fill>
+                        <Fill>
+                            <Image src={images.egghead} padding={10} />
+                        </Fill>
+                    </Layout>
                 </Slide>
             </Deck>
         );
