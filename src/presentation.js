@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'react-emotion';
-import { Deck, Slide, Heading, Text } from 'spectacle';
+import { Deck, Slide, Image, Heading, Text } from 'spectacle';
 
 import createTheme from 'spectacle/lib/themes/default';
 
@@ -19,6 +19,11 @@ const BestText = styled(CustomText)`
     font-family: Comic Sans MS;
     font-size: 0.8em;
 `;
+
+const images = {
+    spectacle: require('./assets/spectacle.png'),
+    egghead: require('./assets/egghead.png')
+};
 
 export default class Presentation extends React.Component {
     render() {
@@ -74,6 +79,14 @@ export default class Presentation extends React.Component {
                     <CustomText
                         caps
                     >{`Text also extends from <Base />`}</CustomText>
+                </Slide>
+
+                <Slide>
+                    <Heading size={6} textColor="heading" padding="0 0 30px 0">
+                        {`Use <Image/> component to add images to your slides`}
+                    </Heading>
+                    <Image src={images.spectacle} height="200px" />
+                    <Image src={images.egghead} height="200px" />
                 </Slide>
             </Deck>
         );
