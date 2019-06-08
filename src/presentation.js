@@ -16,7 +16,7 @@ const CustomText = styled(Text)`
 
 const BestText = styled(CustomText)`
     font-family: Comic Sans MS;
-    font-size: 1em;
+    font-size: 0.8em;
 `;
 
 export default class Presentation extends React.Component {
@@ -51,6 +51,10 @@ export default class Presentation extends React.Component {
                     <BestText>
                         Use react-emotion to create custom base components
                     </BestText>
+                </Slide>
+
+                <Slide>
+                    <Heading textColor="heading">{`Use props to style a <Heading /> component`}</Heading>
                 </Slide>
             </Deck>
         );
