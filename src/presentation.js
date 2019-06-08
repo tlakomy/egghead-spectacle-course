@@ -88,6 +88,12 @@ export default class Presentation extends React.Component {
                     <Image src={images.spectacle} height="200px" />
                     <Image src={images.egghead} height="200px" />
                 </Slide>
+
+                <Slide>
+                    <Heading textColor="heading" caps fit>
+                        {`Use <Layout /> and <Fill /> tags for flexible layouts`}
+                    </Heading>
+                </Slide>
             </Deck>
         );
     }
