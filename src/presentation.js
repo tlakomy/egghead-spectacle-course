@@ -54,7 +54,16 @@ export default class Presentation extends React.Component {
                 </Slide>
 
                 <Slide>
-                    <Heading textColor="heading">{`Use props to style a <Heading /> component`}</Heading>
+                    <Heading
+                        size={5}
+                        caps
+                        italic
+                        padding={100}
+                        textColor="heading"
+                    >{`Use props to style a <Heading /> component`}</Heading>
+                    <CustomText
+                        caps
+                    >{`Text also extends from <Base />`}</CustomText>
                 </Slide>
             </Deck>
         );
