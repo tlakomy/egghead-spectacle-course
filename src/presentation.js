@@ -1,19 +1,23 @@
 import React from 'react';
+import styled from 'react-emotion';
 import { Deck, Slide, Heading, Text } from 'spectacle';
 
 import createTheme from 'spectacle/lib/themes/default';
 
-const theme = createTheme(
-    {
-        primary: '#141518',
-        secondary: '#FAFBFC',
-        heading: 'papayawhip',
-        text: '#E98F97'
-    },
-    {
-        bestFont: 'Comic Sans MS'
-    }
-);
+const theme = createTheme({
+    primary: '#141518',
+    secondary: '#FAFBFC',
+    heading: 'papayawhip'
+});
+
+const CustomText = styled(Text)`
+    color: #e98f97;
+`;
+
+const BestText = styled(CustomText)`
+    font-family: Comic Sans MS;
+    font-size: 1em;
+`;
 
 export default class Presentation extends React.Component {
     render() {
@@ -21,25 +25,32 @@ export default class Presentation extends React.Component {
             <Deck theme={theme}>
                 <Slide>
                     <Heading>Learn spectacle</Heading>
-                    <Text textColor="text">by @tlakomy</Text>
+                    <CustomText>by @tlakomy</CustomText>
                 </Slide>
 
                 <Slide bgColor="secondary">
-                    <Text textColor="text">
+                    <CustomText>
                         {`To add a slide to your presentation, use a <Slide /> component`}
-                    </Text>
+                    </CustomText>
                 </Slide>
 
                 <Slide>
-                    <Text textColor="text">{`To add text, use <Heading /> or <Text /> components`}</Text>
+                    <CustomText>{`To add text, use <Heading /> or <Text /> components`}</CustomText>
                 </Slide>
 
                 <Slide>
                     <Heading textColor="heading">Themes</Heading>
-                    <Text textFont="bestFont" textColor="text">
+                    <CustomText>
                         To create a theme use createTheme(colors, fonts)
                         function
-                    </Text>
+                    </CustomText>
+                </Slide>
+
+                <Slide>
+                    <Heading textColor="heading">Style base components</Heading>
+                    <BestText>
+                        Use react-emotion to create custom base components
+                    </BestText>
                 </Slide>
             </Deck>
         );
