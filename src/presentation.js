@@ -38,7 +38,7 @@ export default class Presentation extends React.Component {
         return (
             <Deck
                 transition={['zoom', 'slide']}
-                transitionDuration={500}
+                transitionDuration={2000}
                 theme={theme}
             >
                 <Slide transition={['zoom']} bgColor="primary">
