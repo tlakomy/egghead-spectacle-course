@@ -104,15 +104,22 @@ export default class Presentation extends React.Component {
                     </Heading>
                     <Layout>
                         <Fill>
-                            <CustomText bgColor="white">Check out</CustomText>
-                            <CustomText bgColor="white">those</CustomText>
-                            <CustomText bgColor="white">images:</CustomText>
+                            <Fit>
+                                <Image
+                                    src={images.spectacle}
+                                    padding={10}
+                                    margin={0}
+                                />
+                            </Fit>
                         </Fill>
                         <Fill>
-                            <Image src={images.spectacle} padding={10} />
-                        </Fill>
-                        <Fill>
-                            <Image src={images.egghead} padding={10} />
+                            <Fit>
+                                <Image
+                                    src={images.egghead}
+                                    padding={10}
+                                    margin={0}
+                                />
+                            </Fit>
                         </Fill>
                     </Layout>
                 </Slide>
