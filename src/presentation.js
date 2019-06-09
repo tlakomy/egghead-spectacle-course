@@ -189,7 +189,7 @@ export default class Presentation extends React.Component {
 
                 <Slide>
                     <Heading textColor="heading" size={5}>
-                        Use ComponentPlayground to demo code
+                        Demo time
                     </Heading>
                 </Slide>
             </Deck>
