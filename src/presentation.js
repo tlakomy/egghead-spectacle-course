@@ -197,6 +197,12 @@ export default class Presentation extends React.Component {
                         <LiveError />
                     </LiveProvider>
                 </Slide>
+
+                <Slide>
+                    <Heading textColor="heading" size={5}>
+                        Jump to first slide with GoToAction
+                    </Heading>
+                </Slide>
             </Deck>
         );
     }
