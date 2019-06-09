@@ -10,7 +10,8 @@ import {
     Fill,
     Fit,
     List,
-    ListItem
+    ListItem,
+    Appear
 } from 'spectacle';
 
 import createTheme from 'spectacle/lib/themes/default';
@@ -128,16 +129,38 @@ export default class Presentation extends React.Component {
 
                 <Slide>
                     <List>
-                        <ListItem>
-                            {`Use a <List /> component to create a list`}
-                        </ListItem>
-                        <ListItem>
-                            {`Each item in the list is an instance of an <ListItem /> component`}
-                        </ListItem>
-                        <ListItem>By default they all appear at once</ListItem>
-                        <ListItem>
-                            {`Use <Appear /> component to show them one by one`}
-                        </ListItem>
+                        <Appear>
+                            <ListItem>
+                                {`Use a <List /> component to create a list`}
+                            </ListItem>
+                        </Appear>
+                        <Appear>
+                            <ListItem>
+                                {`Each item in the list is an instance of an <ListItem /> component`}
+                            </ListItem>
+                        </Appear>
+                        <Appear>
+                            <ListItem>
+                                By default they all appear at once
+                            </ListItem>
+                        </Appear>
+                        <Appear
+                            transitionDuration={4000}
+                            startValue={{
+                                opacity: 0,
+                                color: 'red',
+                                fontSize: '10px'
+                            }}
+                            endValue={{
+                                opacity: 1,
+                                color: 'blue',
+                                fontSize: '60px'
+                            }}
+                        >
+                            <ListItem>
+                                {`Use <Appear /> component to show them one by one`}
+                            </ListItem>
+                        </Appear>
                     </List>
                 </Slide>
             </Deck>
