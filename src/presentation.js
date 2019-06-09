@@ -11,7 +11,8 @@ import {
     List,
     ListItem,
     Appear,
-    CodePane
+    CodePane,
+    GoToAction
 } from 'spectacle';
 import { LiveProvider, LiveEditor, LiveError, LivePreview } from 'react-live';
 import Counter from './components/Counter';
@@ -49,6 +50,8 @@ export default class Presentation extends React.Component {
                 <Slide>
                     <Heading>Learn spectacle</Heading>
                     <CustomText>by @tlakomy</CustomText>
+                    <GoToAction slide={15}>Jump back</GoToAction>
+                    {/* <GoToAction slide={'jump-slide'}>Jump back</GoToAction> */}
                 </Slide>
 
                 <Slide bgColor="secondary">
@@ -198,10 +201,22 @@ export default class Presentation extends React.Component {
                     </LiveProvider>
                 </Slide>
 
-                <Slide>
+                <Slide id="jump-slide">
                     <Heading textColor="heading" size={5}>
                         Jump to first slide with GoToAction
                     </Heading>
+                    <GoToAction slide={1}>Jump to 1st slide</GoToAction>
+
+                    {/* <GoToAction
+                        render={goToSlide => (
+                            <button
+                                className="jump-button"
+                                onClick={() => goToSlide(1)}
+                            >
+                                Jump to 1st slide
+                            </button>
+                        )}
+                    /> */}
                 </Slide>
             </Deck>
         );
