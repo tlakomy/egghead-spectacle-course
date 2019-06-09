@@ -12,7 +12,8 @@ import {
     ListItem,
     Appear,
     CodePane,
-    GoToAction
+    GoToAction,
+    Markdown
 } from 'spectacle';
 import { LiveProvider, LiveEditor, LiveError, LivePreview } from 'react-live';
 import Counter from './components/Counter';
@@ -223,6 +224,16 @@ export default class Presentation extends React.Component {
                     <Heading textColor="heading" size={5}>
                         You can use Markdown too!
                     </Heading>
+                </Slide>
+
+                <Slide bgColor="#bbb">
+                    <Markdown>
+                        {`
+You can write inline images, [Markdown Links](http://commonmark.org), paragraph text and most other markdown syntax
+* Lists too!
+* With ~~strikethrough~~ and _italic_
+* Add some \`inline code\` to your slides!`}
+                    </Markdown>
                 </Slide>
             </Deck>
         );
