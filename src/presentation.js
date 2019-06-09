@@ -14,6 +14,7 @@ import {
     Appear
 } from 'spectacle';
 import Counter from './components/Counter';
+import './presentation.css';
 
 import createTheme from 'spectacle/lib/themes/default';
 
@@ -163,6 +164,16 @@ export default class Presentation extends React.Component {
                             </ListItem>
                         </Appear>
                     </List>
+                </Slide>
+
+                <Slide>
+                    <h1
+                        className="my-custom-title"
+                        onClick={() => alert("It's just React!")}
+                    >
+                        You can do whatever you want
+                    </h1>
+                    <Counter />
                 </Slide>
             </Deck>
         );
