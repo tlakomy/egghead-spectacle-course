@@ -218,6 +218,12 @@ export default class Presentation extends React.Component {
                         )}
                     /> */}
                 </Slide>
+
+                <Slide>
+                    <Heading textColor="heading" size={5}>
+                        You can use Markdown too!
+                    </Heading>
+                </Slide>
             </Deck>
         );
     }
