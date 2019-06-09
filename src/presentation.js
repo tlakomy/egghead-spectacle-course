@@ -13,7 +13,8 @@ import {
     Appear,
     CodePane,
     GoToAction,
-    Markdown
+    Markdown,
+    MarkdownSlides
 } from 'spectacle';
 import { LiveProvider, LiveEditor, LiveError, LivePreview } from 'react-live';
 import Counter from './components/Counter';
@@ -235,6 +236,16 @@ You can write inline images, [Markdown Links](http://commonmark.org), paragraph 
 * Add some \`inline code\` to your slides!`}
                     </Markdown>
                 </Slide>
+                {MarkdownSlides`
+## Create Multiple Slides in Markdown
+---
+* Separated by - - -
+* Can be used anywhere within the deck
+---
+\`\`\`js
+const myCode = console.log('Woah, this is awesome!');
+\`\`\`
+          `}
             </Deck>
         );
     }
