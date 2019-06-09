@@ -183,6 +183,7 @@ export default class Presentation extends React.Component {
                         lang="jsx"
                         contentEditable={true}
                         source={counterExample}
+                        theme={'light'}
                     />
                 </Slide>
             </Deck>
