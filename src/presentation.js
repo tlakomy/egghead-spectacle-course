@@ -8,7 +8,9 @@ import {
     Text,
     Layout,
     Fill,
-    Fit
+    Fit,
+    List,
+    ListItem
 } from 'spectacle';
 
 import createTheme from 'spectacle/lib/themes/default';
@@ -37,11 +39,7 @@ const images = {
 export default class Presentation extends React.Component {
     render() {
         return (
-            <Deck
-                theme={theme}
-                transition={['slide']}
-                transitionDuration={1000}
-            >
+            <Deck theme={theme} transition={['slide']} transitionDuration={500}>
                 <Slide>
                     <Heading>Learn spectacle</Heading>
                     <CustomText>by @tlakomy</CustomText>
@@ -126,6 +124,21 @@ export default class Presentation extends React.Component {
                         Provide a transition for the whole deck or a single
                         slide with transition prop
                     </Heading>
+                </Slide>
+
+                <Slide>
+                    <List>
+                        <ListItem>
+                            {`Use a <List /> component to create a list`}
+                        </ListItem>
+                        <ListItem>
+                            {`Each item in the list is an instance of an <ListItem /> component`}
+                        </ListItem>
+                        <ListItem>By default they all appear at once</ListItem>
+                        <ListItem>
+                            {`Use <Appear /> component to show them one by one`}
+                        </ListItem>
+                    </List>
                 </Slide>
             </Deck>
         );
