@@ -13,6 +13,7 @@ import {
     ListItem,
     Appear
 } from 'spectacle';
+import Counter from './components/Counter';
 
 import createTheme from 'spectacle/lib/themes/default';
 
