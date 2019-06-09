@@ -8,17 +8,18 @@ import {
     Text,
     Layout,
     Fill,
-    Fit,
     List,
     ListItem,
     Appear,
     CodePane
 } from 'spectacle';
+import { LiveProvider, LiveEditor, LiveError, LivePreview } from 'react-live';
 import Counter from './components/Counter';
 import counterExample from './examples/counterExample';
-import './presentation.css';
-
+import counterDemo from './examples/counterDemo';
 import createTheme from 'spectacle/lib/themes/default';
+
+import './presentation.css';
 
 const theme = createTheme({
     primary: '#141518',
@@ -104,22 +105,18 @@ export default class Presentation extends React.Component {
                     </Heading>
                     <Layout>
                         <Fill>
-                            <Fit>
-                                <Image
-                                    src={images.spectacle}
-                                    padding={10}
-                                    margin={0}
-                                />
-                            </Fit>
+                            <Image
+                                src={images.spectacle}
+                                padding={10}
+                                margin={0}
+                            />
                         </Fill>
                         <Fill>
-                            <Fit>
-                                <Image
-                                    src={images.egghead}
-                                    padding={10}
-                                    margin={0}
-                                />
-                            </Fit>
+                            <Image
+                                src={images.egghead}
+                                padding={10}
+                                margin={0}
+                            />
                         </Fill>
                     </Layout>
                 </Slide>
@@ -189,8 +186,16 @@ export default class Presentation extends React.Component {
 
                 <Slide>
                     <Heading textColor="heading" size={5}>
-                        Demo time
+                        Use react-live to demo your components
                     </Heading>
+                </Slide>
+
+                <Slide>
+                    <LiveProvider code={counterDemo}>
+                        <LiveEditor />
+                        <LivePreview />
+                        <LiveError />
+                    </LiveProvider>
                 </Slide>
             </Deck>
         );
