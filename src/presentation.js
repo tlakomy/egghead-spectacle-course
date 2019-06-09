@@ -14,7 +14,8 @@ import {
     CodePane,
     GoToAction,
     Markdown,
-    MarkdownSlides
+    MarkdownSlides,
+    Notes
 } from 'spectacle';
 import { LiveProvider, LiveEditor, LiveError, LivePreview } from 'react-live';
 import Counter from './components/Counter';
@@ -52,8 +53,14 @@ export default class Presentation extends React.Component {
                 <Slide>
                     <Heading>Learn spectacle</Heading>
                     <CustomText>by @tlakomy</CustomText>
-                    <GoToAction slide={15}>Jump back</GoToAction>
-                    {/* <GoToAction slide={'jump-slide'}>Jump back</GoToAction> */}
+                    <Notes>
+                        <h3>Slide notes</h3>
+                        <ol>
+                            <li>It's going to be okay</li>
+                            <li>Take a deep breath</li>
+                            <li>You got this</li>
+                        </ol>
+                    </Notes>
                 </Slide>
 
                 <Slide bgColor="secondary">
